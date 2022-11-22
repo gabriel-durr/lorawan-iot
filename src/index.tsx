@@ -7,6 +7,8 @@ import * as ReactDOM from "react-dom/client";
 import {App} from "./App";
 import {ChakraProvider} from "@chakra-ui/react";
 import {theme} from "./theme";
+import {Header} from "./Components/Header";
+import {WebSocketProvider} from "./contexts/WebSocketContex";
 
 const container = document.getElementById("root");
 if (!container) throw new Error("Failed to find the root element");
@@ -16,7 +18,10 @@ root.render(
 	<React.StrictMode>
 		<ChakraProvider theme={theme}>
 			<ColorModeScript initialColorMode={theme.config.initialColorMode} />
-			<App />
+			<WebSocketProvider>
+				<Header />
+				<App />
+			</WebSocketProvider>
 		</ChakraProvider>
 	</React.StrictMode>
 );
