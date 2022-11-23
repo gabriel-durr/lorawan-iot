@@ -1,26 +1,31 @@
 import ReactApexChart from "react-apexcharts";
-import {useState, useLayoutEffect} from "react";
 import {ApexOptions} from "apexcharts";
 
-// type bpmDataProps = {
-// 	highDevice: number[];
-// 	lowDevice: number[];
-// 	mediumDevice: number[];
-// };
-// type bpmNameProps = {
-// 	abbreviated: string;
-// 	full: string;
-// };
+import {useState, useLayoutEffect} from "react";
+import {Text} from "@chakra-ui/react";
 
-// type dataDataProps = {
-// 	bpmData: bpmDataProps;
-// 	bpmName: bpmNameProps;
-// };
+import {NoData} from "../no-data";
 
-// type dataSeries = number[];
+import {NameChartsProps, DevicePropsProps} from "./types/types-charts";
 
-const BpmChart = ({}) => {
+type BpmChartProps = {
+	isConnected: boolean;
+	nameCharts: NameChartsProps;
+	livesimpleDevice: DevicePropsProps;
+	healthyesDevice: DevicePropsProps;
+	watchlifeDevice: DevicePropsProps;
+};
+
+const BpmChart = ({
+	isConnected,
+	nameCharts,
+	livesimpleDevice,
+	healthyesDevice,
+	watchlifeDevice,
+}: BpmChartProps) => {
 	// const [data, setData] = useState<dataSeries>([]);
+
+	console.log(livesimpleDevice);
 
 	// useLayoutEffect(() => {
 	// 	const {lowDevice} = bpmData;
@@ -71,13 +76,25 @@ const BpmChart = ({}) => {
 	};
 
 	return (
-		<ReactApexChart
-			options={options}
-			series={[{name: "", data: []}]}
-			type="line"
-			height="200"
-			width="400"
-		/>
+		<>
+			{isConnected ? (
+				<ReactApexChart
+					options={options}
+					series={[{name: "", data: []}]}
+					type="line"
+					height="200"
+					width="400"
+				/>
+			) : (
+				<NoData bg="rgba(213,68,96,0.3)">
+					Gráfico
+					<Text as="strong" px="1" color="proiot.heart">
+						BPM
+					</Text>
+					Está sem dados para serem Visualizados
+				</NoData>
+			)}
+		</>
 	);
 };
 

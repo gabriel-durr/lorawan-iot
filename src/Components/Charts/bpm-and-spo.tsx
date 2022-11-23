@@ -1,8 +1,21 @@
 import ReactApexChart from "react-apexcharts";
 import {ApexOptions} from "apexcharts";
-import React, {useState} from "react";
+import {NameChartsProps, DevicePropsProps} from "./types/types-charts";
 
-const BpmAndSpo: React.FC = () => {
+import React, {useState} from "react";
+import {Text} from "@chakra-ui/react";
+
+import {NoData} from "../no-data";
+
+type BpmAndSpoProps = {
+	isConnected: boolean;
+	nameCharts: NameChartsProps;
+	livesimpleDevice: DevicePropsProps;
+	healthyesDevice: DevicePropsProps;
+	watchlifeDevice: DevicePropsProps;
+};
+
+const BpmAndSpo = ({isConnected, livesimpleDevice}: BpmAndSpoProps) => {
 	const [series, setSeries] = useState([
 		{
 			name: "BPM",
@@ -89,13 +102,25 @@ const BpmAndSpo: React.FC = () => {
 	};
 
 	return (
-		<ReactApexChart
-			series={series}
-			options={options}
-			type="line"
-			height="450"
-			width="500"
-		/>
+		<>
+			{isConnected ? (
+				<ReactApexChart
+					series={series}
+					options={options}
+					type="line"
+					height="450"
+					width="500"
+				/>
+			) : (
+				<NoData bg="rgba(106,81,255,0.3)">
+					Gráfico
+					<Text as="strong" px="1" color="proiot.purple.900">
+						Principal
+					</Text>
+					Está sem dados para serem Visualizados
+				</NoData>
+			)}
+		</>
 	);
 };
 

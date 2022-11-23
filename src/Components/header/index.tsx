@@ -1,6 +1,6 @@
 import {Flex, Image} from "@chakra-ui/react";
-import {ColorModeSwitcher} from "./ColorModeSwitcher";
-import Logo from "../assets/proiot-horizontal.png";
+import {ColorModeSwitcher} from "../color-mode-switcher";
+import Logo from "../../assets/proiot-horizontal.png";
 
 export const Header = () => {
 	return (
