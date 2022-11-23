@@ -1,17 +1,30 @@
-import React from "react";
+import {useState} from "react";
+
 import {Flex, Heading, Text} from "@chakra-ui/react";
 import {Charts} from "./components/charts";
+import {SelectDevice} from "./components/select-device";
 
-export const App = () => (
-	<Flex gap="2" pt="150px" w="container.xl" m="auto" direction="column">
-		<Heading>Challenge ProIoT</Heading>
-		<Text>
-			WWW Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-			Possimus exercitationem rerum cumque voluptatum molestias corporis
-			quasi voluptas odio sequi dolore porro molestiae, quisquam
-			voluptates quia unde voluptatibus maxime eius ducimus!
-		</Text>
+export const App = () => {
+	const [tabIndex, setTabIndex] = useState<number>(0);
 
-		<Charts />
-	</Flex>
-);
+	return (
+		<Flex
+			gap="8"
+			pt="150px"
+			w={{base: "90%", md: "container.md", lg: "container.xl"}}
+			m="auto"
+			justify="center"
+			direction="column">
+			<SelectDevice tabIndex={tabIndex} setTabIndex={setTabIndex} />
+
+			<Charts tabIndex={tabIndex} />
+			<Text fontSize="xs" alignSelf="center">
+				<Text as="strong">ProIoT Challenge</Text> 💟🤞 Developed and
+				Designed by
+				<Text px="5px" color="proiot.purple.800" as="span">
+					Gabriel Dürr
+				</Text>
+			</Text>
+		</Flex>
+	);
+};

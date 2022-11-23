@@ -8,7 +8,9 @@ export const Header = () => {
 			as="header"
 			pos="fixed"
 			w="100vw"
-			h="96px"
+			h="92px"
+			bg="proiot.blue.900"
+			shadow="xs"
 			align="center"
 			px="44.5px"
 			pr="74px"
@@ -18,7 +20,6 @@ export const Header = () => {
 				src={Logo}
 				alt="ProIoT Logo"
 				h="40px"
-				bg="#fff"
 				rounded="sm"
 			/>
 			<ColorModeSwitcher />
