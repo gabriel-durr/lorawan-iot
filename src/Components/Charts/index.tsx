@@ -1,31 +1,55 @@
-import {useEffect, useState, lazy, Suspense} from "react";
-import {Stack} from "@chakra-ui/react";
-import {useSocketCharts} from "../../hooks/useSocketCharts";
-import {Environment} from "../../Environment";
-// import {io} from "socket.io-client";
+import {lazy, Suspense} from "react";
+import {Stack, Text} from "@chakra-ui/react";
 
-const BpmAndSpo = lazy(() => import("./BpmAndSpo"));
-const BpmChart = lazy(() => import("./BpmChart"));
-const SpoChart = lazy(() => import("./SpoChart"));
+import {useSocketCharts} from "../../hooks/use-socket-charts";
+import {Environment} from "../../environment";
+import {Spinner} from "../spinner";
+
+const BpmAndSpo = lazy(() => import("./bpm-and-spo"));
+const BpmChart = lazy(() => import("./bpm-chart"));
+const SpoChart = lazy(() => import("./spo-chart"));
 
 export const Charts = () => {
-	const {bpmData} = useSocketCharts({
+	const {
+		isConnected,
+		livesimpleDevice,
+		healthyesDevice,
+		watchlifeDevice,
+		nameCharts,
+	} = useSocketCharts({
 		isConnect: true,
 		host: Environment.HOST_LOCAL,
 	});
 
-	console.log(bpmData);
-
 	return (
 		<Stack
-			w="90%"
+			w={{base: "90%", md: "100%"}}
 			justify="space-between"
+			spacing="8"
 			direction={{base: "column", lg: "row"}}>
-			<Suspense fallback={<div>Loading...</div>}>
-				<BpmAndSpo />
-				<BpmChart /* bpmData={bpmData} bpmName={nameCharts.bpmName} */
+			<Suspense fallback={<Spinner />}>
+				<BpmAndSpo
+					isConnected={isConnected}
+					nameCharts={nameCharts}
+					livesimpleDevice={livesimpleDevice}
+					healthyesDevice={healthyesDevice}
+					watchlifeDevice={watchlifeDevice}
 				/>
-				<SpoChart /* spoData={spoData} spoName={nameCharts.spoName} */
+
+				<BpmChart
+					isConnected={isConnected}
+					nameCharts={nameCharts}
+					livesimpleDevice={livesimpleDevice}
+					healthyesDevice={healthyesDevice}
+					watchlifeDevice={watchlifeDevice}
+				/>
+
+				<SpoChart
+					isConnected={isConnected}
+					nameCharts={nameCharts}
+					livesimpleDevice={livesimpleDevice}
+					healthyesDevice={healthyesDevice}
+					watchlifeDevice={watchlifeDevice}
 				/>
 			</Suspense>
 		</Stack>

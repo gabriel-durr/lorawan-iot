@@ -1,6 +1,6 @@
 import React from "react";
 import {Flex, Heading, Text} from "@chakra-ui/react";
-import {Charts} from "./Components/Charts";
+import {Charts} from "./components/charts";
 
 export const App = () => (
 	<Flex gap="2" pt="150px" w="container.xl" m="auto" direction="column">
