@@ -1,6 +1,7 @@
 import {useEffect, useState, lazy, Suspense} from "react";
 import {Stack} from "@chakra-ui/react";
 import {useSocketCharts} from "../../hooks/useSocketCharts";
+import {Environment} from "../../Environment";
 // import {io} from "socket.io-client";
 
 const BpmAndSpo = lazy(() => import("./BpmAndSpo"));
@@ -9,8 +10,8 @@ const SpoChart = lazy(() => import("./SpoChart"));
 
 export const Charts = () => {
 	const {bpmData} = useSocketCharts({
-		host: "http://localhost:7000",
 		isConnect: true,
+		host: Environment.HOST_LOCAL,
 	});
 
 	console.log(bpmData);

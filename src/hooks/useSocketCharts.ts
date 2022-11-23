@@ -30,7 +30,7 @@ export const useSocketCharts = ({isConnect, host}: ConnectConfig) => {
 		} else {
 			setIsConnected(false);
 		}
-	}, [isConnect, host]);
+	}, [isConnect, host, setConnectConfig]);
 
 	const nameCharts: NameCharts = {
 		bpmName: {abbreviated: "BPM", full: "Beat Per Minute"},
