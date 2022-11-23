@@ -7,12 +7,12 @@ type BpmAndSpoNameProps = {
 	full: string;
 };
 
-type BpmNameProps = {
+type BpmNameAndSpo = {
 	bpmName: BpmAndSpoNameProps;
 	spoName: BpmAndSpoNameProps;
 };
 
-export type NameChartsProps = BpmNameProps;
+export type NameChartsProps = BpmNameAndSpo;
 
 /**
  * Device é a estrutura geral do dispositivo recebida da API WebSockets

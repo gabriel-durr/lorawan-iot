@@ -1,5 +1,5 @@
-import {lazy, Suspense} from "react";
-import {Stack, Text} from "@chakra-ui/react";
+import {lazy, Suspense, useEffect, useState} from "react";
+import {Stack} from "@chakra-ui/react";
 
 import {useSocketCharts} from "../../hooks/use-socket-charts";
 import {Environment} from "../../environment";
@@ -9,7 +9,13 @@ const BpmAndSpo = lazy(() => import("./bpm-and-spo"));
 const BpmChart = lazy(() => import("./bpm-chart"));
 const SpoChart = lazy(() => import("./spo-chart"));
 
-export const Charts = () => {
+type ChartsProps = {
+	tabIndex: number;
+};
+
+export const Charts = ({tabIndex}: ChartsProps) => {
+	const [isLoading, setIsLoading] = useState<boolean>(false);
+
 	const {
 		isConnected,
 		livesimpleDevice,
@@ -21,6 +27,14 @@ export const Charts = () => {
 		host: Environment.HOST_LOCAL,
 	});
 
+	useEffect(() => {
+		(async () => {
+			setIsLoading(true);
+			await new Promise(resolve => setTimeout(resolve, 400));
+			setIsLoading(false);
+		})();
+	}, [tabIndex]);
+
 	return (
 		<Stack
 			w={{base: "90%", md: "100%"}}
@@ -28,29 +42,38 @@ export const Charts = () => {
 			spacing="8"
 			direction={{base: "column", lg: "row"}}>
 			<Suspense fallback={<Spinner />}>
-				<BpmAndSpo
-					isConnected={isConnected}
-					nameCharts={nameCharts}
-					livesimpleDevice={livesimpleDevice}
-					healthyesDevice={healthyesDevice}
-					watchlifeDevice={watchlifeDevice}
-				/>
+				{!isLoading ? (
+					<>
+						<BpmAndSpo
+							tabIndex={tabIndex}
+							isConnected={isConnected}
+							nameCharts={nameCharts}
+							livesimpleDevice={livesimpleDevice}
+							healthyesDevice={healthyesDevice}
+							watchlifeDevice={watchlifeDevice}
+						/>
 
-				<BpmChart
-					isConnected={isConnected}
-					nameCharts={nameCharts}
-					livesimpleDevice={livesimpleDevice}
-					healthyesDevice={healthyesDevice}
-					watchlifeDevice={watchlifeDevice}
-				/>
+						<BpmChart
+							tabIndex={tabIndex}
+							isConnected={isConnected}
+							nameCharts={nameCharts}
+							livesimpleDevice={livesimpleDevice}
+							healthyesDevice={healthyesDevice}
+							watchlifeDevice={watchlifeDevice}
+						/>
 
-				<SpoChart
-					isConnected={isConnected}
-					nameCharts={nameCharts}
-					livesimpleDevice={livesimpleDevice}
-					healthyesDevice={healthyesDevice}
-					watchlifeDevice={watchlifeDevice}
-				/>
+						<SpoChart
+							tabIndex={tabIndex}
+							isConnected={isConnected}
+							nameCharts={nameCharts}
+							livesimpleDevice={livesimpleDevice}
+							healthyesDevice={healthyesDevice}
+							watchlifeDevice={watchlifeDevice}
+						/>
+					</>
+				) : (
+					<Spinner />
+				)}
 			</Suspense>
 		</Stack>
 	);
