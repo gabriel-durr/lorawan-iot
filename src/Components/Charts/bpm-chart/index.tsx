@@ -34,8 +34,9 @@ const BpmChart = ({
 	const [series, setSeries] = useState<SeriesProps>({} as SeriesProps);
 	const [bpmValue, setBpmValue] = useState<number>(0);
 
-	const optionsAndBpmName = {
+	const optionsAndIncrements = {
 		...options,
+
 		title: {text: nameCharts.bpmName.full},
 	};
 
@@ -80,13 +81,18 @@ const BpmChart = ({
 	return (
 		<>
 			{isConnected ? (
-				<VStack>
+				<VStack
+					w={{base: "100%", md: "100%", lg: "30%"}}
+					h={{base: "450px", md: "480px", lg: "420px"}}
+					p="1rem"
+					color="gray.900"
+					bg="whiteAlpha.900"
+					shadow="lg">
 					<ReactApexChart
-						options={optionsAndBpmName}
+						options={optionsAndIncrements}
 						series={[series]}
-						type="line"
-						height="200"
-						width="400"
+						height="50%"
+						width="100%"
 					/>
 
 					<HeartBpm bpmValue={bpmValue} />

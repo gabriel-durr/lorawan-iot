@@ -3,6 +3,7 @@ export const options: ApexOptions = {
 	chart: {
 		height: 350,
 		type: "line",
+		background: "#fff",
 		dropShadow: {
 			enabled: true,
 			color: "#4d57c4b8",
@@ -37,6 +38,7 @@ export const options: ApexOptions = {
 	},
 	grid: {
 		borderColor: "#dfdfdf",
+
 		row: {
 			colors: ["#4018e027", "transparent"], // takes an array which will be repeated on columns
 			opacity: 0.5,

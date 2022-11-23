@@ -20,7 +20,11 @@ export const HeartBpm = ({bpmValue}: HeartBpmProps) => {
 	};
 
 	return (
-		<Box as={motion.div} variants={variants} boxSize="134px" animate="show">
+		<Box
+			as={motion.div}
+			variants={variants}
+			boxSize={{base: "62px", md: "72px", lg: "134px"}}
+			animate="show">
 			<Text fontWeight="bold" fontSize="1.3rem">
 				{bpmValue}
 				<Text px="3px" as="span" color="red.400">

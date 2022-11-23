@@ -4,7 +4,7 @@ import {LungSpo} from "../../lung-spo";
 
 import {NameChartsProps, DevicePropsProps} from "./../types/types-charts";
 
-import {useState, useLayoutEffect} from "react";
+import {useState, useEffect} from "react";
 import {NoData} from "../../no-data";
 
 import {Text, VStack} from "@chakra-ui/react";
@@ -39,7 +39,7 @@ const SpoChart = ({
 		title: {text: nameCharts.spoName.full},
 	};
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (!isConnected) return;
 
 		switch (tabIndex) {
@@ -80,13 +80,18 @@ const SpoChart = ({
 	return (
 		<>
 			{isConnected ? (
-				<VStack>
+				<VStack
+					w={{base: "100%", md: "100%", lg: "30%"}}
+					h={{base: "450px", md: "480px", lg: "420px"}}
+					shadow="md"
+					bg="whiteAlpha.900"
+					p="1rem"
+					color="gray.900">
 					<ReactApexChart
 						options={optionsAndSpoName}
 						series={[series]}
-						type="line"
-						height="200"
-						width="400"
+						height="50%"
+						width="100%"
 					/>
 					<LungSpo spoValue={spoValue} />
 				</VStack>

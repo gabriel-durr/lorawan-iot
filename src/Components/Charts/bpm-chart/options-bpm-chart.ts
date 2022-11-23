@@ -3,11 +3,20 @@ import {ApexOptions} from "apexcharts";
 export const options: ApexOptions = {
 	chart: {
 		height: 70,
+		background: "#fff",
 		type: "line",
 		zoom: {
 			enabled: false,
 		},
+		dropShadow: {
+			enabled: true,
+			top: 1,
+			left: 1,
+			blur: 2,
+			opacity: 0.2,
+		},
 	},
+
 	dataLabels: {
 		enabled: false,
 	},
@@ -27,6 +36,7 @@ export const options: ApexOptions = {
 			opacity: 0.2,
 		},
 	},
+
 	xaxis: {
 		categories: [
 			"1 min",

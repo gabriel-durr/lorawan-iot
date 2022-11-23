@@ -5,7 +5,7 @@ import {NameChartsProps, DevicePropsProps} from "./../types/types-charts";
 import {NoData} from "../../no-data";
 
 import {useState, useEffect} from "react";
-import {Text} from "@chakra-ui/react";
+import {Text, Box} from "@chakra-ui/react";
 
 type BpmAndSpoProps = {
 	tabIndex: number;
@@ -81,18 +81,24 @@ const BpmAndSpo = ({
 		nameCharts.spoName.abbreviated,
 		healthyesDevice.variables,
 		watchlifeDevice.variables,
+		tabIndex,
 	]);
 
 	return (
 		<>
 			{isConnected ? (
-				<ReactApexChart
-					series={series}
-					options={options}
-					type="line"
-					height="450"
-					width="500"
-				/>
+				<Box
+					w={{base: "100%", md: "100%", lg: "40%"}}
+					h={{base: "450px", md: "480px", lg: "420px"}}
+					bg="#fff"
+					p={["7px", "10px"]}
+					shadow="lg">
+					<ReactApexChart
+						height="100%"
+						series={series}
+						options={options}
+					/>
+				</Box>
 			) : (
 				<NoData bg="rgba(106,81,255,0.3)">
 					Gráfico

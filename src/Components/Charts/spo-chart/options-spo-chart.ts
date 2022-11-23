@@ -4,6 +4,7 @@ export const options: ApexOptions = {
 	chart: {
 		height: 70,
 		type: "line",
+		background: "#fff",
 		zoom: {
 			enabled: false,
 		},
