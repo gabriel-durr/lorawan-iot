@@ -87,30 +87,27 @@ Este repositório contém duas branchs: Developer é a branch que possuí  proje
 
 
 
-1. <b> Faça o clone do projeto e instale as dependências do Client e Server individualmente </b>
-
-&emsp; Ou basta executar os códigos abaixo para instalar as dependências do Server:
+1. <h4> Faça o clone do projeto e instale as dependências do Client e Server individualmente, ou basta executar os códigos abaixo: </h4>
 
 <br/>
-<br/>
 
 
-&emsp; Irá fazer o clone > abrir a pasta do projeto
-
+&emsp; <em> Irá fazer o clone > abrir a pasta do projeto > instalar dependências do server </em>
 
 ```bash
   $ git clone https://github.com/gabriel-durr/proiot-challenge.git && cd proiot-challenge/server && yarn
 ```
 <br/>
-
-
-2. <b> Após finalizar, essa nova linha para instalar as dependÊncias do Server </b>
-
+<br/>
 <br/>
 <br/>
 
+2. <h4> Após finalizar. Insira essa nova linha para instalar as dependências do Client </h4>
 
-&emsp; Irá voltar uma pasta > abrir a pasta client > instalar as dependências>
+<br/>
+
+
+&emsp; <em>Irá voltar uma pasta > abrir a pasta client > instalar as dependências </em>
 
 ```bash
   $ cd .. && cd client && yarn
@@ -118,7 +115,8 @@ Este repositório contém duas branchs: Developer é a branch que possuí  proje
 
 <br/>
 <br/>
-
+<br/>
+<br/>
 
 
 > <h2> Iniciando o Projeto </h2>
@@ -127,7 +125,8 @@ Este repositório contém duas branchs: Developer é a branch que possuí  proje
 <br/>
 
 
-<b> Para iniciar o projeto do Client</b>
+<h4> Para iniciar o projeto do Client<h4>
+        
 ```bash
   $ yarn start
 ```
@@ -136,7 +135,8 @@ Este repositório contém duas branchs: Developer é a branch que possuí  proje
 <br/>
 <br/>
 
-<b> Para iniciar o projeto do Server </b>
+<h4> Para iniciar o projeto do Server <h4>
+        
 ```bash
   $ yarn dev
 ```
