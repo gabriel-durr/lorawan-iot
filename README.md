@@ -1,7 +1,10 @@
 <h1 align="center" class="line-1 anim-typewriter">ProIot Challenge</h1>
+<br/>
+<br/>
+
 
 <div align="center">
-        <img align="center" src="./.github/proiot-challenge.gif" alt="Project ProIot" width="90%"> 
+        <img align="center" src="./.github/proiot-challenge.gif" alt="Project ProIot" width="100%"> 
         
 </div>
 
@@ -17,21 +20,33 @@
 <br/>
 <br/>
 
-<h2 id="challenge"  align="center">⚡ The challenge </h2>
+<h1 id="challenge"  align="center">⚡ O Desafio </h1>
 
-<div align="center">
-        <p>  </p>
-</div>
+> <br/>
+
+
+<br/>
+<br/>
+
+
+<p>Essa aplicação simula equipamentos LoraWan, voltadas ao monitoramento de sinais vitais em real time dos usuários. 
+
+Com a tecnologia evoluindo cada vez mais, é algo que beneficia principalmente pessoas que precisam de maior atenção e cuidados por "N" fatores. Essa é só uma das inúmeras possibilidades da IoT. 
+
+
+
+Ambiente do Projeto:
+
+Este repositório contém duas branchs: Developer é a branch que possuí o projeto do client e do server, enquanto a branch Main contém apenas o projeto que irá para produção. 
+
+
+Como configurar e Utilizar:
+
+
+ambos estão já configurados, </p>
 
 <br/><br/>
 
-> <h3> Links : </h3>
-
-ApexCharts ... [Learn More](https://apexcharts.com/react-chart-demos/ "Clique para ser redirecionado!").
-
-Socket.IO é uma biblioteca que permite baixa-latência, bidirecional e baseado em eventos de comunicação entre cliente e um servidor... [Learn More](https://socket.io/pt-br/docs/v4/ "Clique para ser redirecionado!")
-
-<br/><br/>
 
 <h2 id="built_with"> 🧙‍♂️ Built with</h2>
 
@@ -41,7 +56,14 @@ Socket.IO é uma biblioteca que permite baixa-latência, bidirecional e baseado 
 
 <p float="left">
 
-<img alt="Example Tech"  src="./.github/ nome da Tech" width="ajust do icon"   hspace="4"/>
+<img alt="Example Tech"  src="./.github/apexcharts.svg" width="40px" hspace="4"/>
+<img alt="Example Tech"  src="./.github/chakra-ui.png" width="40px" hspace="4"/>
+<img alt="Example Tech"  src="./.github/typescript.svg" width="40px" hspace="4"/>
+<img alt="Example Tech"  src="./.github/reactjs.svg" width="40px" hspace="4"/>
+<img alt="Example Tech"  src="./.github/nodejs.svg" width="40px" hspace="4"/>
+<img alt="Example Tech"  src="./.github/framer-motion.png" width="40px" hspace="4"/>
+<img alt="Example Tech"  src="./.github/socket-io.png" width="40px" hspace="4"/>
+
 
 </p>
         
@@ -54,34 +76,87 @@ Socket.IO é uma biblioteca que permite baixa-latência, bidirecional e baseado 
 <br/>
 <br/>
 
-> <h3> Getting start : </h3>
-> <br/>
 
-<div>
+> <h2> Iniciando o Projeto </h2>
 
-1. <b>Clone the project</b>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+1. <b>Faça o clone do projeto e instale as dependências do Client e Server individualmente</b>
+
+> Ou basta executar os códigos abaixo para instalar as dependÊncias do Server: 
+<br/>
+<br/>
+
+<b>Irá fazer o clone > abrir a pasta do projeto </b>
 
 ```bash
-  $ git clone URL DO PROJETO && cd NOME DA PASTA DO PROJETO
+  $ git clone https://github.com/gabriel-durr/proiot-challenge.git && cd proiot-challenge/server && yarn
 ```
+<br/>
 
-2. <b>Install dependencies</b>
+
+2. Após finalizar, essa nova linha para instalar as dependÊncias do Server
+
+<br/>
+<br/>
+
+
+<b>Irá voltar uma pasta > abrir a pasta client > instalar as dependências></b>
 
 ```bash
-  $ expo install
-  $ yarn or npm i
+  $ cd .. && cd client && yarn
 ```
 
-3. <b>Start the application</b>
+<br/>
+<br/>
 
+3. <b>Agora só startar o Client e Server/b>
+
+<br/>
+<br/>
+
+> Para iniciar o projeto do Client
 ```bash
-  $ expo start
-  $ yarn dev or npm run dev
+  $ yarn start
 ```
 
-</div>
+
+<br/>
+<br/>
+
+> Para iniciar o projeto do Server
+```bash
+  $ yarn dev
+```
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+> <h3>Links 🔗</h3>
+
+ApexCharts ... [Learn More](https://apexcharts.com/react-chart-demos/ "Clique para ser redirecionado!").
+Socket.io ... [Learn More](https://socket.io/pt-br/docs/v4/ "Clique para ser redirecionado!")
+
+
+Socket.IO é uma biblioteca que permite baixa-latência, bidirecional e baseado em eventos de comunicação entre cliente e um servidor... [Learn More](https://socket.io/pt-br/docs/v4/ "Clique para ser redirecionado!")
+
+<br/><br/>
+
 
 <br>
+
+
 
 <h5 id = "author" align="center"></h5>
 
@@ -103,7 +178,6 @@ Socket.IO é uma biblioteca que permite baixa-latência, bidirecional e baseado 
 <br/>
 <br/>
 
-<h2></h2>
 
 <div align="center">
         
