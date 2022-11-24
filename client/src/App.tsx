@@ -1,11 +1,46 @@
 import {useState} from "react";
+import {Environment} from "./environment";
+import {useSocketCharts} from "./hooks/use-socket-charts";
 
-import {Flex, Heading, Stack, Divider, Box, Text} from "@chakra-ui/react";
+import {
+	Flex,
+	Heading,
+	Stack,
+	Divider,
+	Box,
+	Text,
+	Button,
+	HStack,
+} from "@chakra-ui/react";
 import {Charts} from "./components/charts";
 import {SelectDevice} from "./components/select-device";
+import {ButtonDisable} from "./components/button-disable";
+import {FeedbackActivation} from "./components/feedback-activation";
 
 export const App = () => {
 	const [tabIndex, setTabIndex] = useState<number>(0);
+
+	const [activateConnection, setActivateConnection] = useState(false);
+
+	const {
+		isConnected,
+		livesimpleDevice,
+		healthyesDevice,
+		watchlifeDevice,
+		nameCharts,
+	} = useSocketCharts({
+		isConnect: activateConnection,
+		host: Environment.HOST_LOCAL,
+	});
+
+	function handleActiveConnection() {
+		if (activateConnection) {
+			setActivateConnection(false);
+			return;
+		}
+
+		setActivateConnection(true);
+	}
 
 	return (
 		<Flex
@@ -23,13 +58,28 @@ export const App = () => {
 				align="center"
 				justify="space-between">
 				<SelectDevice tabIndex={tabIndex} setTabIndex={setTabIndex} />
+
+				<HStack pos="relative" w="384px" justify="end">
+					<FeedbackActivation isConnect={isConnected} />
+					<ButtonDisable
+						isConnect={isConnected}
+						handleActiveConnection={handleActiveConnection}
+					/>
+				</HStack>
 				<Box pb={{base: "2rem"}} order={{base: "-1", lg: 0}}>
 					<Heading>ProIot Challenge</Heading>
 					<Divider orientation="horizontal" />
 				</Box>
 			</Stack>
 
-			<Charts tabIndex={tabIndex} />
+			<Charts
+				isConnected={isConnected}
+				tabIndex={tabIndex}
+				livesimpleDevice={livesimpleDevice}
+				healthyesDevice={healthyesDevice}
+				watchlifeDevice={watchlifeDevice}
+				nameCharts={nameCharts}
+			/>
 			<Text fontSize={{base: "2xs", md: "xs"}} alignSelf="center">
 				<Text as="strong">ProIoT Challenge</Text> 💟🤞 Developed and
 				Designed by

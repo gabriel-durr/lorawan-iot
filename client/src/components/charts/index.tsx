@@ -1,9 +1,8 @@
 import {lazy, Suspense, useEffect, useState} from "react";
 import {Stack} from "@chakra-ui/react";
 
-import {useSocketCharts} from "../../hooks/use-socket-charts";
-import {Environment} from "../../environment";
 import {Spinner} from "../spinner";
+import {DevicePropsProps, NameChartsProps} from "./types/types-charts";
 
 const BpmAndSpo = lazy(() => import("./bpm-and-spo"));
 const BpmChart = lazy(() => import("./bpm-chart"));
@@ -11,21 +10,22 @@ const SpoChart = lazy(() => import("./spo-chart"));
 
 type ChartsProps = {
 	tabIndex: number;
+	isConnected: boolean;
+	nameCharts: NameChartsProps;
+	livesimpleDevice: DevicePropsProps;
+	healthyesDevice: DevicePropsProps;
+	watchlifeDevice: DevicePropsProps;
 };
 
-export const Charts = ({tabIndex}: ChartsProps) => {
+export const Charts = ({
+	tabIndex,
+	isConnected,
+	healthyesDevice,
+	livesimpleDevice,
+	nameCharts,
+	watchlifeDevice,
+}: ChartsProps) => {
 	const [isLoading, setIsLoading] = useState<boolean>(false);
-
-	const {
-		isConnected,
-		livesimpleDevice,
-		healthyesDevice,
-		watchlifeDevice,
-		nameCharts,
-	} = useSocketCharts({
-		isConnect: true,
-		host: Environment.HOST_LOCAL,
-	});
 
 	useEffect(() => {
 		(async () => {
