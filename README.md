@@ -24,7 +24,7 @@
 
 <br/> <br/>
 
-Essa aplicação simula equipamentos LoraWan, voltadas ao monitoramento de sinais vitais em real time dos usuários. Essa é só uma das inúmeras possibilidades da IoT ⚡.
+Essa aplicação simula dispositivos LoraWan, voltadas ao monitoramento de sinais vitais em real time dos usuários. Essa é só uma das inúmeras possibilidades da IoT ⚡.
 
 Este repositório contém dois projetos, <b>Client</b> front-end e <b>Server</b> api back-end <b>WebSockets</b>. No client criei um gerenciador de estado com context API, e um hook personalizado que pode ser utilizado em toda aplicação, contendo os seguintes dados:
 
@@ -38,7 +38,7 @@ Este repositório contém dois projetos, <b>Client</b> front-end e <b>Server</b>
 
 <br/> <br/>
 
-Através desses dados, criei as funcionalidades, animações.., do <b>Dashboard</b>.
+Através desses dados, criei as funcionalidades, animações e layout do <b>Dashboard</b>.
 
 <br/><br/>
 
@@ -76,7 +76,7 @@ Através desses dados, criei as funcionalidades, animações.., do <b>Dashboard<
 
   <br/>
 
-    clone https://github.com/gabriel-durr/proiot-challenge.git && cd proiot-challenge/server && yarn
+    git clone https://github.com/gabriel-durr/proiot-challenge.git && cd proiot-challenge/server && yarn
 
 <br/><br/>
 
