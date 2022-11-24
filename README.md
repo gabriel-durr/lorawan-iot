@@ -37,7 +37,7 @@ Com a tecnologia evoluindo cada vez mais, é algo que beneficia principalmente p
 
 Ambiente do Projeto:
 
-Este repositório contém duas branchs: Developer é a branch que possuí o projeto do client e do server, enquanto a branch Main contém apenas o projeto que irá para produção. 
+Este repositório contém duas branchs: Developer é a branch que possuí o projeto do client e do server, enquanto a branch Main contém apenas o projeto que criei para testar aplicação em produção (logo irei fazer merge com a Developer, e deixar apenas a Main).
 
 
 Como configurar e Utilizar:
