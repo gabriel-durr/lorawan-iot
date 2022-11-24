@@ -34,7 +34,7 @@ Este repositório contém dois projetos, <b>Client</b> front-end e <b>Server</b>
 -   <b>nameCharts</b> : Objeto no qual as props contém o nome dos tipos de dados que serão plotados nos gráficos.
 -   <b>watchlifeDevice</b>, <b>livesimpleDevice</b>, <b>healthyesDevice</b> : Estados com a estrutura de três dispositivos já prontas da API, que são atualizadas a cada 10 segundos.
 -   <b>idSocket</b> : Contém o ID do socket conectado.
--   <b>error</b> : Caso tenha algum erro, conseguimos visualizar através dessa variável.
+-   <b>error</b> : Caso ocorra algum erro, conseguimos visualizar através dessa variável.
 
 <br/> <br/>
 
