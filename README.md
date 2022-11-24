@@ -40,10 +40,8 @@ Ambiente do Projeto:
 Este repositório contém duas branchs: Developer é a branch que possuí o projeto do client e do server, enquanto a branch Main contém apenas o projeto que criei para testar aplicação em produção (logo irei fazer merge com a Developer, e deixar apenas a Main).
 
 
-Como configurar e Utilizar:
+</p>
 
-
-ambos estão já configurados, </p>
 
 <br/><br/>
 
@@ -77,7 +75,7 @@ ambos estão já configurados, </p>
 <br/>
 
 
-> <h2> Iniciando o Projeto </h2>
+> <h2> Instalando o Projeto </h2>
 
 
 
@@ -91,11 +89,14 @@ ambos estão já configurados, </p>
 
 1. <b>Faça o clone do projeto e instale as dependências do Client e Server individualmente</b>
 
-> Ou basta executar os códigos abaixo para instalar as dependÊncias do Server: 
+&emsp; Ou basta executar os códigos abaixo para instalar as dependÊncias do Server:
+
 <br/>
 <br/>
 
-<b>Irá fazer o clone > abrir a pasta do projeto </b>
+
+&emsp; Irá fazer o clone > abrir a pasta do projeto
+
 
 ```bash
   $ git clone https://github.com/gabriel-durr/proiot-challenge.git && cd proiot-challenge/server && yarn
@@ -103,13 +104,13 @@ ambos estão já configurados, </p>
 <br/>
 
 
-2. Após finalizar, essa nova linha para instalar as dependÊncias do Server
+2. <b> Após finalizar, essa nova linha para instalar as dependÊncias do Server </b>
 
 <br/>
 <br/>
 
 
-<b>Irá voltar uma pasta > abrir a pasta client > instalar as dependências></b>
+&emsp; Irá voltar uma pasta > abrir a pasta client > instalar as dependências>
 
 ```bash
   $ cd .. && cd client && yarn
@@ -118,12 +119,15 @@ ambos estão já configurados, </p>
 <br/>
 <br/>
 
-3. <b>Agora só startar o Client e Server/b>
+
+
+> <h2> Iniciando o Projeto </h2>
 
 <br/>
 <br/>
 
-> Para iniciar o projeto do Client
+
+<b> Para iniciar o projeto do Client</b>
 ```bash
   $ yarn start
 ```
@@ -132,7 +136,7 @@ ambos estão já configurados, </p>
 <br/>
 <br/>
 
-> Para iniciar o projeto do Server
+<b> Para iniciar o projeto do Server </b>
 ```bash
   $ yarn dev
 ```
