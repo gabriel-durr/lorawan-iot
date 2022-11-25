@@ -1,4 +1,4 @@
-import {lazy, Suspense, useEffect, useState} from "react";
+import React, {lazy, ReactNode, Suspense, useEffect, useState} from "react";
 import {Stack} from "@chakra-ui/react";
 
 import {Spinner} from "../spinner";
@@ -15,6 +15,7 @@ type ChartsProps = {
 	livesimpleDevice: DevicePropsProps;
 	healthyesDevice: DevicePropsProps;
 	watchlifeDevice: DevicePropsProps;
+	[rest: string]: any;
 };
 
 export const Charts = ({
@@ -24,6 +25,7 @@ export const Charts = ({
 	livesimpleDevice,
 	nameCharts,
 	watchlifeDevice,
+	...rest
 }: ChartsProps) => {
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -40,7 +42,8 @@ export const Charts = ({
 			w={{base: "90%", md: "100%"}}
 			justify="space-between"
 			spacing="8"
-			direction={{base: "column", lg: "row"}}>
+			direction={{base: "column", lg: "row"}}
+			{...rest}>
 			<Suspense fallback={<Spinner />}>
 				{!isLoading ? (
 					<>

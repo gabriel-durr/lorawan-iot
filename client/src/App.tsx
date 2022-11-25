@@ -2,19 +2,12 @@ import {useState} from "react";
 import {Environment} from "./environment";
 import {useSocketCharts} from "./hooks/use-socket-charts";
 
-import {
-	Flex,
-	Heading,
-	Stack,
-	Divider,
-	Box,
-	Text,
-	HStack,
-} from "@chakra-ui/react";
+import {Flex, Heading, Stack, Divider, Box, HStack} from "@chakra-ui/react";
 import {Charts} from "./components/charts";
 import {SelectDevice} from "./components/select-device";
 import {ButtonDisable} from "./components/button-disable";
 import {FeedbackActivation} from "./components/feedback-activation";
+import {Footer} from "./components/footer";
 
 export const App = () => {
 	const [tabIndex, setTabIndex] = useState<number>(0);
@@ -43,6 +36,7 @@ export const App = () => {
 
 	return (
 		<Flex
+			as="main"
 			gap="8"
 			pt={{base: "2rem", md: "6rem"}}
 			pb="1rem"
@@ -52,6 +46,7 @@ export const App = () => {
 			align="center"
 			direction="column">
 			<Stack
+				as="section"
 				w="100%"
 				direction={{base: "column", lg: "row"}}
 				align="center"
@@ -72,6 +67,7 @@ export const App = () => {
 			</Stack>
 
 			<Charts
+				as="section"
 				isConnected={isConnected}
 				tabIndex={tabIndex}
 				livesimpleDevice={livesimpleDevice}
@@ -79,13 +75,7 @@ export const App = () => {
 				watchlifeDevice={watchlifeDevice}
 				nameCharts={nameCharts}
 			/>
-			<Text fontSize={{base: "2xs", md: "xs"}} alignSelf="center">
-				<Text as="strong">ProIoT Challenge</Text> 💟🤞 Developed and
-				Designed by
-				<Text px="5px" color="proiot.purple.800" as="span">
-					Gabriel Dürr
-				</Text>
-			</Text>
+			<Footer />
 		</Flex>
 	);
 };
