@@ -88,7 +88,7 @@ const BpmAndSpo = ({
 		<>
 			{isConnected ? (
 				<Box
-					w={{base: "100%", md: "100%", lg: "40%"}}
+					w={{base: "100%", md: "70%", lg: "40%"}}
 					h={{base: "450px", md: "480px", lg: "420px"}}
 					bg="#fff"
 					p={["7px", "10px"]}

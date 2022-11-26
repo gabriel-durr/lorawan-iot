@@ -81,8 +81,8 @@ const SpoChart = ({
 		<>
 			{isConnected ? (
 				<VStack
-					w={{base: "100%", md: "100%", lg: "30%"}}
-					h={{base: "450px", md: "480px", lg: "420px"}}
+					w={{base: "100%", md: "70%", lg: "30%"}}
+					h={{base: "450px", md: "372px", lg: "420px"}}
 					shadow="md"
 					bg="whiteAlpha.900"
 					p="1rem"

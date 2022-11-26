@@ -5,7 +5,7 @@ import {useSocketCharts} from "./hooks/use-socket-charts";
 import {Flex, Heading, Stack, Divider, Box, HStack} from "@chakra-ui/react";
 import {Charts} from "./components/charts";
 import {SelectDevice} from "./components/select-device";
-import {ButtonDisable} from "./components/button-disable";
+import {ChangeConnectionButton} from "./components/change-connection-button";
 import {FeedbackActivation} from "./components/feedback-activation";
 import {Footer} from "./components/footer";
 
@@ -54,9 +54,12 @@ const App = () => {
 				justify="space-between">
 				<SelectDevice tabIndex={tabIndex} setTabIndex={setTabIndex} />
 
-				<HStack pos="relative" w="384px" justify="end">
+				<HStack
+					pos="relative"
+					w={{base: "20.5rem", md: "23rem", lg: "22rem"}}
+					justify="end">
 					<FeedbackActivation isConnect={isConnected} />
-					<ButtonDisable
+					<ChangeConnectionButton
 						isConnect={isConnected}
 						handleActiveConnection={handleActiveConnection}
 					/>

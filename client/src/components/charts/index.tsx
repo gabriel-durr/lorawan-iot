@@ -41,6 +41,7 @@ export const Charts = ({
 		<Stack
 			w={{base: "90%", md: "100%"}}
 			justify="space-between"
+			align="center"
 			spacing="8"
 			direction={{base: "column", lg: "row"}}
 			{...rest}>

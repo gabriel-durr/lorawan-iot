@@ -1,39 +1,36 @@
 {
-  "name": "proiot-challenge",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "jest"
-  },
-  "dependencies": {
-    "@chakra-ui/react": "^2.4.1",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "@fontsource/open-sans": "^4.5.13",
-    "@fontsource/raleway": "^4.5.11",
-    "apexcharts": "^3.36.3",
-    "framer-motion": "^6",
-    "react": "^18.2.0",
-    "react-apexcharts": "^1.4.0",
-    "react-dom": "^18.2.0",
-    "socket.io-client": "^4.5.4"
-  },
-  "devDependencies": {
-    "@chakra-ui/cli": "^2.1.8",
-    "@swc/core": "^1.3.19",
-    "@swc/jest": "^0.2.23",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.2.3",
-    "@vitejs/plugin-react": "^2.2.0",
-    "jest": "^29.3.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.3"
-  }
+	"name": "proiot-challenge",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"@chakra-ui/react": "^2.4.1",
+		"@emotion/react": "^11",
+		"@emotion/styled": "^11",
+		"@fontsource/open-sans": "^4.5.13",
+		"@fontsource/raleway": "^4.5.11",
+		"apexcharts": "^3.36.3",
+		"framer-motion": "^6",
+		"react": "^18.2.0",
+		"react-apexcharts": "^1.4.0",
+		"react-dom": "^18.2.0",
+		"socket.io-client": "^4.5.4"
+	},
+	"devDependencies": {
+		"@chakra-ui/cli": "^2.1.8",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^14.4.3",
+		"@vitejs/plugin-react": "^2.2.0",
+		"jsdom": "^20.0.3",
+		"typescript": "^4.6.4",
+		"vite": "^3.2.3",
+		"vitest": "^0.25.3"
+	}
 }

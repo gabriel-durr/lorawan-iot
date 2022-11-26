@@ -27,15 +27,21 @@ export const SelectDevice = ({tabIndex, setTabIndex}: SelectDeviceProps) => {
 	const bg = colors[tabIndex];
 	return (
 		<Tabs
-			w={{base: "100%", md: "520px"}}
+			w={{base: "21.25rem", md: "32.5rem"}}
 			h={{base: "270px", md: "150px", lg: "130px"}}
 			shadow="md"
 			onChange={index => setTabIndex(index)}
 			bg={bg}>
 			<TabList flexDir={{base: "column", md: "row"}}>
-				<Tab>Device: Watch life</Tab>
-				<Tab>Device: Live Simple</Tab>
-				<Tab>Device: Health Yes</Tab>
+				<Tab>
+					<b>Device:</b>&nbsp; Watch life
+				</Tab>
+				<Tab>
+					<b>Device:</b>&nbsp; Live Simple
+				</Tab>
+				<Tab>
+					<b>Device:</b>&nbsp; Health Yes
+				</Tab>
 			</TabList>
 			<TabPanels px="1rem">
 				<TabPanel display="flex" flexDir="row" gap="4">

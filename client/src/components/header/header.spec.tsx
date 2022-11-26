@@ -1,5 +1,5 @@
-import {render, screen} from "@testing-library/react";
-import {Header} from ".";
+import {render, screen} from "../../utils/test-utils";
+import {Header} from "./index";
 
 describe("Header", () => {
 	test("should render the component", () => {

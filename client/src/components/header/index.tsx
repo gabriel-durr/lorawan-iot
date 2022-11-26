@@ -14,7 +14,7 @@ export const Header = () => {
 			shadow="xs"
 			align="center"
 			px="44.5px"
-			pr="74px"
+			pr={{base: "10px", md: "74px"}}
 			justify="space-between">
 			<Image
 				as="img"

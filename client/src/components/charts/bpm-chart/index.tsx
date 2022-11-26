@@ -81,8 +81,8 @@ const BpmChart = ({
 		<>
 			{isConnected ? (
 				<VStack
-					w={{base: "100%", md: "100%", lg: "30%"}}
-					h={{base: "450px", md: "480px", lg: "420px"}}
+					w={{base: "100%", md: "70%", lg: "30%"}}
+					h={{base: "450px", md: "354px", lg: "420px"}}
 					p="1rem"
 					color="gray.900"
 					bg="whiteAlpha.900"
