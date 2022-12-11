@@ -60,7 +60,9 @@ Através desses dados, criei as funcionalidades, animações e layout do <b>Dash
 
 <b/>
 
-      yarn test
+```bash
+ yarn test
+```
 
 <br/><br/>
 
@@ -97,28 +99,41 @@ Através desses dados, criei as funcionalidades, animações e layout do <b>Dash
 1- Irá realizar o clone e instalar as dependências do <b>Server</b> :
 
   <br/>
+  
+```bash
+ git clone https://github.com/gabriel-durr/proiot-challenge.git && cd proiot-challenge/server && yarn
+```
 
-    git clone https://github.com/gabriel-durr/proiot-challenge.git && cd proiot-challenge/server && yarn
+
+    
 
 <br/><br/>
 
 2- Após finalizar. Insira essa nova linha para instalar as dependências do Client:
 
-    cd .. && cd client && yarn
+```bash
+ cd .. && cd client && yarn
+```
+    
 
 <br/> <br/>
 
-3- Inicie o Projeto executando em cada pasta (Client e Server):
+3- Abra cada projeto (Client e Server), e enicie o server no terminal:
 
 <b>Client</b>
 
-    yarn start
-
+```bash
+ yarn start
+```
+   
 <br/>
 
 <b>Server</b>
 
-    yarn dev
+```bash
+ yarn dev
+```
+
 
 <br/> <br/> <br/> <br/>
 
