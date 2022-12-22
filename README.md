@@ -1,4 +1,4 @@
-<h1 align="center">ProIot Challenge</h1>
+<h1 align="center">Vitals loraWan Simulation</h1>
 
 <br/> <br/>
 
