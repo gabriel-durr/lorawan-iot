@@ -1,4 +1,4 @@
-<h1 align="center">Proiot Challenge</h1>
+<h1 align="center">LoraWan IoT</h1>
 
 <br/> <br/>
 
