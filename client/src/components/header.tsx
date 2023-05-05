@@ -1,7 +1,7 @@
-import {Flex, Image, useColorModeValue} from "@chakra-ui/react";
-import {ColorModeSwitcher} from "./color-mode-switcher";
-import LogoOriginal from "../assets/proiot-horizontal.png";
-import LogoWhite from "../assets/proiot-horizontal-white.png";
+import LogoLorawan from "../assets/lorawan.png";
+import { ColorModeSwitcher } from "./color-mode-switcher";
+
+import { Flex, Image } from "@chakra-ui/react";
 
 export const Header = () => {
 	return (
@@ -14,13 +14,14 @@ export const Header = () => {
 			shadow="xs"
 			align="center"
 			px="44.5px"
-			pr={{base: "10px", md: "74px"}}
-			justify="space-between">
+			pr={{ base: "10px", md: "74px" }}
+			justify="space-between"
+		>
 			<Image
 				as="img"
-				src={useColorModeValue(LogoOriginal, LogoWhite)}
-				alt="ProIoT Logo"
-				h={useColorModeValue("38px", "30px")}
+				src={LogoLorawan}
+				alt="LoraWan Logo"
+				w="42px"
 				rounded="sm"
 			/>
 			<ColorModeSwitcher />
